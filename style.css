@@ -1,6 +1,12 @@
 /* font-family: 'Playfair Display', serif;
 font-family: 'Poppins', sans-serif; */
 
+html,
+body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
 :root {
     --branding-color: #6C63FF;
     --heading-font-family: 'Playfair Display', serif;
@@ -28,7 +34,7 @@ line-height: 30px;
 }
 
 h2.mb-3 {
-    font-size: 96px;
+    font-size: 60px;
 }
 
 .hero {
@@ -71,11 +77,11 @@ color: var(--branding-color);
 
 @media (max-width: 576px) {
   h1 {
-    font-size: 60px;
+    font-size: 44px;
     line-height: 1.5;
   }
-  h2 {
-    font-size: 44px;
+  h2.mb-3 {
+    font-size: 30px;
     text-align: center;
   }
   p {
