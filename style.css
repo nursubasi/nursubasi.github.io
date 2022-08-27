@@ -1,7 +1,7 @@
 /* font-family: 'Playfair Display', serif;
 font-family: 'Poppins', sans-serif; */
 
-.root {
+:root {
     --branding-color: #6C63FF;
     --heading-font-family: 'Playfair Display', serif;
     --default-font-family: 'Poppins', sans-serif; 
