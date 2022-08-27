@@ -24,6 +24,11 @@ h1 {
 
 p {
 font-weight: normal;
+line-height: 30px;
+}
+
+h2.mb-3 {
+    font-size: 96px;
 }
 
 .hero {
@@ -46,11 +51,42 @@ line-height: 2;
 color: #272142;
 }
 
-.btn-branding {
+#contact-button {
 background: var(--branding-color);
 border-radius: 4px;
 color: white;
 font-size: 18px;
 line-height: 27px;
 padding: 15px 30px;
+}
+
+.primary-link {
+border: 1px solid var(--branding-color);
+border-radius: 4px;
+font-size: 18px;
+line-height: 27px;
+padding: 15px 30px;
+color: var(--branding-color);
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 60px;
+    line-height: 1.5;
+  }
+  h2 {
+    font-size: 44px;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+  .hero {
+    padding: 80px 20px;
+}
+  .primary-link {
+    display: block;
+    text-align: center;
+    margin: 0 20px;
+  }
 }
