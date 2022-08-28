@@ -33,6 +33,10 @@ font-weight: normal;
 line-height: 30px;
 }
 
+h4 {
+  font-size: 48px;
+}
+
 h2.mb-3 {
     font-size: 60px;
 }
@@ -60,7 +64,7 @@ margin-left: 15px;
 nav a {
 text-decoration: none;
 color: #272142;
-  transition: all 100ms ease-in-out;
+transition: all 100ms ease-in-out;
 }
 
 nav a:hover,
@@ -90,7 +94,7 @@ line-height: 2;
 color: #272142;
 }
 
-#contact-button {
+.contact-button {
 background: var(--branding-color);
 border-radius: 4px;
 color: white;
@@ -139,6 +143,41 @@ line-height: 1.5;
   font-size: 14px;
 }
 
+footer {
+  margin: 60px 0;
+}
+
+footer .contact-box {
+  background: var(--secondary-color);
+  padding: 30px 60px;
+  border-radius: 10px;
+}
+
+footer .email-link {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+footer .email-link:hover {
+  color: var(--branding-color);
+}
+
+footer .social-links a {
+margin: 0 20px;
+color: var(--branding-color);
+background: var(--secondary-color);
+padding: 10px 14px;
+font-size: 18px;
+border-radius: 50%;
+transition: all 100ms ease-in-out;
+}
+
+footer .social-links a:hover {
+  color: white;
+  background-color: var(--branding-color);
+}
+
 @media (max-width: 576px) {
   h1 {
     font-size: 44px;
@@ -152,7 +191,11 @@ line-height: 1.5;
     text-align: center;
   }
 nav ul {
-  padding-left: 40px;
+  display: block;
+  margin: 0 auto;
+}
+nav li {
+  font-size: 13px;
 }
 
   .hero {
