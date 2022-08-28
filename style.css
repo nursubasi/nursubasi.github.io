@@ -8,10 +8,10 @@ body {
 }
 
 :root {
-    --branding-color: #6C63FF;
+    --branding-color: #f38817;
     --heading-font-family: 'Playfair Display', serif;
     --default-font-family: 'Poppins', sans-serif; 
-    --secondary-color: #F9F7FE;
+    --secondary-color: #fae9d8;
 }
 
 body {
@@ -33,7 +33,7 @@ font-weight: normal;
 line-height: 30px;
 }
 
-h4 {
+h3 {
   font-size: 48px;
 }
 
@@ -42,7 +42,12 @@ h2.mb-3 {
 }
 
 .logo {
-  max-width: 150px;
+margin-top: 7px;
+transition: all 80ms ease-in-out;
+}
+
+.logo:hover {
+  color: #ca4f02;;
 }
 
 nav {
@@ -77,7 +82,7 @@ nav li.active a
 .hero {
     background-color: var(--secondary-color);
     text-align: center;
-    padding: 160px 20px;
+    padding: 80px 20px;
 }
 
 .hero p {
@@ -113,6 +118,10 @@ color: var(--branding-color);
 text-decoration: none;
 }
 
+.primary-link:hover {
+  color: #272142;
+}
+
 .content {
   padding: 60px 20px;
   text-align: center;
@@ -144,14 +153,14 @@ line-height: 1.5;
 }
 
 footer {
-  margin: 60px 0;
+  margin: 30px 0;
 }
 
 footer .contact-box {
   background: var(--secondary-color);
   padding: 30px 60px;
   border-radius: 10px;
-  margin: 60px 0;
+  margin: 30px 0;
 }
 
 footer .email-link {
@@ -179,6 +188,16 @@ footer .social-links a:hover {
   background-color: var(--branding-color);
 }
 
+.git-link,
+.contact-content-link {
+  color: var(--branding-color);
+}
+
+.git-link:hover,
+.contact-content-link:hover {
+  color: #ca4f02;
+}
+
 @media (max-width: 576px) {
   h1 {
     font-size: 40px;
@@ -191,6 +210,9 @@ footer .social-links a:hover {
   p {
     text-align: center;
   }
+nav {
+  justify-content: space-evenly;
+}
 nav ul {
   display: block;
   margin: 0 auto;
@@ -205,6 +227,6 @@ nav li {
   .primary-link {
     display: block;
     text-align: center;
-    margin: 0 20px;
+    margin: auto 0;
   }
 }
