@@ -30,7 +30,6 @@ h1 {
 
 p {
 font-weight: normal;
-line-height: 30px;
 }
 
 h3 {
@@ -40,6 +39,7 @@ h3 {
 h2.mb-3 {
     font-size: 60px;
 }
+
 
 .logo {
 margin-top: 7px;
@@ -129,7 +129,6 @@ text-decoration: none;
 
 .content h1 {
 font-size: 64px;
-line-height: 1.5;
 }
 
 .content h2 {
@@ -163,13 +162,13 @@ footer .contact-box {
   margin: 30px 0;
 }
 
-footer .email-link {
+.e-link {
   text-decoration: none;
   color: black;
   font-size: 20px;
 }
 
-footer .email-link:hover {
+.e-link:hover {
   color: var(--branding-color);
 }
 
