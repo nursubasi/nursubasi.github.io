@@ -1,6 +1,13 @@
 /* font-family: 'Playfair Display', serif;
 font-family: 'Poppins', sans-serif; */
 
+::selection {
+  background: var(--branding-color);
+}
+::-moz-selection {
+  background: var(--branding-color);
+}
+
 html,
 body {
   max-width: 100% !important;
@@ -17,6 +24,7 @@ body {
 body {
 font-family: var(--default-font-family);
 }
+
 
 h1 h2 h3 h4 h5 h6 {
 color: black;
@@ -40,6 +48,10 @@ h2.mb-3 {
     font-size: 60px;
 }
 
+p.text-muted::selection {
+background: var(--branding-color);
+color: white;
+}
 
 .logo {
 margin-top: 7px;
@@ -47,7 +59,7 @@ transition: all 80ms ease-in-out;
 }
 
 .logo:hover {
-  color: #ca4f02;;
+  color: #ca4f02;
 }
 
 nav {
@@ -75,7 +87,7 @@ transition: all 100ms ease-in-out;
 nav a:hover,
 nav li.active a
 {
-  color: var(--branding-color);
+  color: #ca4f02;
 }
 
 
@@ -109,12 +121,12 @@ padding: 15px 30px;
 }
 
 .primary-link {
-border: 1px solid var(--branding-color);
+border: 1px solid #ca4f02;
 border-radius: 4px;
 font-size: 18px;
 line-height: 27px;
 padding: 15px 30px;
-color: var(--branding-color);
+color: #ca4f02;
 text-decoration: none;
 }
 
@@ -172,6 +184,10 @@ footer .contact-box {
   color: var(--branding-color);
 }
 
+.e-link:hover::selection {
+  background: var(--secondary-color);
+}
+
 footer .social-links a {
 margin: 0 20px;
 color: var(--branding-color);
@@ -192,9 +208,19 @@ footer .social-links a:hover {
   color: var(--branding-color);
 }
 
+.git-link::selection,
+.contact-content-link::selection {
+  background: var(--secondary-color);
+}
+
 .git-link:hover,
 .contact-content-link:hover {
   color: #ca4f02;
+}
+
+.git-link:hover::selection,
+.contact-content-link:hover::selection {
+  background: var(--secondary-color);
 }
 
 @media (max-width: 576px) {
