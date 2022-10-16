@@ -33,7 +33,7 @@ font-weight: bold;
 }
 
 h1 {
-    font-size: 96px;
+    font-size: 52px;
 }
 
 p {
@@ -41,11 +41,11 @@ font-weight: normal;
 }
 
 h3 {
-  font-size: 48px;
+  font-size: 28px;
 }
 
 h2.mb-3 {
-    font-size: 60px;
+    font-size: 26px;
 }
 
 p.text-muted::selection {
@@ -91,6 +91,142 @@ nav li.active a
 }
 
 
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+
+  padding: 20px 0;
+}
+
+
+.top-nav a {
+  text-decoration: none;
+color: #272142;
+transition: all 100ms ease-in-out;
+}
+
+.top-nav li {
+display: inline;
+list-style-type: none;
+line-height: 42px;
+margin-left: 15px;
+}
+
+.top-nav a:hover,
+.top-nav li.active a {
+  color: #ca4f02
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: black;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid white;
+    height: 2.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: black;
+    background-color: white;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid white;
+  }
+}
+
+
+
+
 .hero {
     background-color: var(--secondary-color);
     text-align: center;
@@ -98,16 +234,17 @@ nav li.active a
 }
 
 .hero p {
-    font-size: 36px;
+    font-size: 23px;
     font-weight: bold;
     color: #272142;
+    margin-bottom: 8px;
 }
 
 .hero h2 {
 font-family: var(--default-font-family);
 font-weight: normal;
-font-size: 24px;
-line-height: 2;
+font-size: 20px;
+line-height: 24px;
 color: #272142;
 }
 
@@ -115,7 +252,6 @@ color: #272142;
 background: var(--branding-color);
 border-radius: 4px;
 color: white;
-font-size: 18px;
 line-height: 27px;
 padding: 15px 30px;
 }
@@ -140,7 +276,7 @@ text-decoration: none;
 }
 
 .content h1 {
-font-size: 64px;
+font-size: 56px;
 }
 
 .content h2 {
@@ -223,31 +359,39 @@ footer .social-links a:hover {
   background: var(--secondary-color);
 }
 
+
+
 @media (max-width: 576px) {
   h1 {
-    font-size: 40px;
-    line-height: 1.5;
+    font-size: 26px;
   }
   h2.mb-3 {
     text-align: center;
   }
-  p {
-    text-align: center;
+  p .text-muted {
+    text-align: left;
   }
-nav {
-  justify-content: space-evenly;
+
+.content h1 {
+  font-size: 26px;
 }
-nav ul {
-  display: block;
-  margin: 0 auto;
-}
-nav li {
-  font-size: 13px;
+
+.content h2 {
+  font-size: 16px;
 }
 
   .hero {
     padding: 80px 20px;
 }
+
+.hero p {
+font-size: 18px;
+}
+
+.hero h2 {
+font-size: 16px;
+}
+
   .primary-link {
     display: block;
     text-align: center;

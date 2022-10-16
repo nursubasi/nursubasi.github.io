@@ -23,21 +23,27 @@
 
 <body>
     <div class="container">
-        <nav class="d-flex justify-content-between">
-            <a href="/" title="Homepage" class="logo d-none d-md-block"> Nur Subaşı </a>
-            <ul>
-                <li> <a href="/" title="Homepage"> Home </a> </li>
-                <li class="active"> <a href="/about.html" title="About Me">About</a></li>
-                <li> <a href="index.html#works" title="My Works">Works</a></li>
-                <li> <a href="/contact.html" title="Contact Me">Contact</a></li>
+        <section class="top-nav">
+            <div>
+                <a href="/" title="Homepage"> Nur Subaşı </a>
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li class=" nav-item"> <a href="/" title="Homepage"> Home </a> </li>
+                <li class="active nav-item"> <a href="/about.html" title="About Me">About</a></li>
+                <li class="nav-item"> <a href="index.html#works" title="My Works">Works</a></li>
+                <li class="nav-item"> <a href="/contact.html" title="Contact Me">Contact</a></li>
             </ul>
-        </nav>
+        </section>
 
         <div class="content container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="content-inner">
-                        <h1> Hi I am Nur Subaşı </h1>
+                        <h1> I am Nur Subaşı </h1>
                         <h2 class="mt-3 mb-3"> Transfer Pricing Consultant, Freelance UI & Frontend Developer and
                             Information
                             Technology Master Student, based in Istanbul</h2>
@@ -49,6 +55,32 @@
                 </div>
             </div>
         </div>
+
+
+        <!--
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                    <div class="container" id="nonflex">
+                        <a href="/" title="Homepage" class="logo navbar-brand"> Nur Subaşı </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="active nav-item"> <a href="/" title="Homepage"> Home </a> </li>
+                                    <li class="nav-item"> <a href="/about.html" title="About Me">About</a></li>
+                                    <li class="nav-item"> <a href="index.html#works" title="My Works">Works</a></li>
+                                    <li class="nav-item"> <a href="/contact.html" title="Contact Me">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        -->
+
         <div>
             <p class="mb-4 text-muted" id="story">
                 As a person who graduated from science high school and Political Science and International Relations
